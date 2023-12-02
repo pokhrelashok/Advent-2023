@@ -6,3 +6,6 @@ run day file:
 
 test day file:
    cargo test --package {{ day }} --lib -- {{ file }}::tests
+
+bench day:
+   cargo bench --package {{ day }}
