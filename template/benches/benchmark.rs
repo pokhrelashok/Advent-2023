@@ -1,4 +1,5 @@
 use day1::part1;
+use day1::part2;
 
 fn main() {
     divan::main();
@@ -10,5 +11,5 @@ fn part1() {
 }
 #[divan::bench]
 fn part2() {
-    part1::process(divan::black_box(include_str!("../src/part2.txt")));
+    part2::process(divan::black_box(include_str!("../src/part2.txt")));
 }
