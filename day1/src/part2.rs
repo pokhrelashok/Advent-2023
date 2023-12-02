@@ -1,12 +1,6 @@
 use std::collections::HashMap;
 
-fn main() {
-    let input = include_str!("./02.txt");
-    let output = part2(input);
-    print!("{}", output);
-}
-
-fn part2(input: &str) -> u32 {
+pub fn process(input: &str) -> u32 {
     let digits: HashMap<&str, char> = [
         ("zero", '0'),
         ("one", '1'),
@@ -60,7 +54,7 @@ mod tests {
     use super::*;
     #[test]
     fn it_works() {
-        let result = part2(
+        let result = process(
             "two1nine
 eightwothree
 abcone2threexyz

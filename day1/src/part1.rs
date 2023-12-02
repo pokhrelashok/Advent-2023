@@ -1,10 +1,4 @@
-fn main() {
-    let input = include_str!("./01.txt");
-    let output = part1(input);
-    print!("{}", output);
-}
-
-fn part1(input: &str) -> u32 {
+pub fn process(input: &str) -> u32 {
     let lines = input.split("\n").map(|v| v.trim());
     let mut sum: u32 = 0;
     lines.for_each(|line| {
@@ -30,7 +24,7 @@ mod tests {
     use super::*;
     #[test]
     fn it_works() {
-        let result = part1(
+        let result = process(
             "1abc2
         pqr3stu8vwx
         a1b2c3d4e5f

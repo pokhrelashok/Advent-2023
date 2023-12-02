@@ -2,7 +2,7 @@ create folder:
     @mkdir -p {{ folder }} && cp -r template/* {{ folder }}
 
 run day file:
-    cd {{ day }} && cargo run --bin {{ file }}
+   cargo run --package {{ day }} --bin {{ file }}
 
 test day file:
-    cd {{ day }} && cargo test --bin {{ file }}
+   cargo test --package {{ day }} --lib -- {{ file }}::tests
