@@ -1,5 +1,5 @@
-use day1::part1;
-use day1::part2;
+use day2::part1;
+use day2::part2;
 
 fn main() {
     divan::main();
