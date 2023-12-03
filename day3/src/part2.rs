@@ -1,8 +1,7 @@
-use std::collections::{BTreeMap, HashMap};
+use std::collections::HashMap;
 
 pub fn process(input: &str) -> u32 {
     let lines = input.split("\n").map(|v| v.trim()).collect::<Vec<&str>>();
-    let last_line = lines.len();
     let mut sum: u32 = 0;
     let mut tree: HashMap<String, u32> = HashMap::new();
 
@@ -111,7 +110,6 @@ fn get_vertical_indices(
     let mut top_indices: Vec<String> = vec![];
     let mut bottom_indices: Vec<String> = vec![];
     if line != 0 {
-        top_indices.push(format!("{}-{}", line - 1, index));
         if index != 0 {
             top_indices.push(format!("{}-{}", line - 1, index - 1));
         }
@@ -120,7 +118,6 @@ fn get_vertical_indices(
         }
     }
     if line != column_length - 1 {
-        bottom_indices.push(format!("{}-{}", line + 1, index));
         if index != 0 {
             bottom_indices.push(format!("{}-{}", line + 1, index - 1));
         }
