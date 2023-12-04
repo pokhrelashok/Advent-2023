@@ -1,14 +1,25 @@
 ## Advent of Code 2023
 
-```create folder:
-    @mkdir -p {{ folder }} && cp -r template/* {{ folder }}
+### To create new day. Need to update `cargo.toml` and the benchmark imports after that.
 
-run day file:
-   cargo run --package {{ day }} --bin {{ file }}
+```sh
+    just create day1
+```
 
-test day file:
-   cargo test --package {{ day }} --lib -- {{ file }}::tests
+### To run task
 
-bench day:
-   cargo bench --package {{ day }}
+```sh
+    just create day1 task1
+```
+
+### To test task
+
+```sh
+    just test day1 task1
+```
+
+### To run benchmarks
+
+```sh
+    just bench day1
 ```
