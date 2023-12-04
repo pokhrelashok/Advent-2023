@@ -2,11 +2,7 @@ use std::collections::HashMap;
 
 pub fn process(input: &str) -> usize {
     let lines: Vec<&str> = input.split("\n").map(|v| v.trim()).collect();
-    let mut sum: usize = 0;
-
     let mut scratch_count: HashMap<usize, usize> = HashMap::new();
-    let total_cards = lines.len();
-
     lines.iter().enumerate().for_each(|(index, line)| {
         let input = line.split(": ").last().unwrap();
         let winning_cards: Vec<&str> = (input.split(" | ").next().unwrap()).split(" ").collect();
