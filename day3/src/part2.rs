@@ -100,7 +100,6 @@ pub fn process(input: &str) -> u32 {
 
     return sum;
 }
-
 fn get_vertical_indices(
     index: usize,
     line: usize,
